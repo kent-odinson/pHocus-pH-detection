@@ -46,7 +46,7 @@ tit1, tit2 = st.columns([2, 1])
 with tit1:
     st.title("pHocus Smart Patch")
 with tit2:
-    st.image(logo)
+    st.image(logo, width = 100px)
 st.write("""
 ##### A machine learning-based pH detector to measure your skin pH from just a photo of patch!
 """)

@@ -42,7 +42,7 @@ st.markdown(
 )
 
 # App title
-tit1, tit2 = st.columns([2, 1])
+tit1, tit2 = st.columns(2)
 with tit1:
     st.title("pHocus Smart Patch")
 with tit2:

@@ -49,7 +49,7 @@ st.write("""
 """)
 
 # User Input
-st.title("### Input Photo")
+st.title("Input Photo")
 predict = st.file_uploader("", type=["jpg", "jpeg", "png"])
 
 if predict is not None:

@@ -29,7 +29,7 @@ st.markdown(
 )
 
 # App title
-tit1, tit2 = st.columns([4, 3])
+tit1, tit2 = st.columns([3, 4])
 with tit1:
     st.image(logo)
 with tit2:

@@ -59,9 +59,9 @@ plt.rcParams['figure.dpi'] = 300 #Displayed Image Resolution
 plt.show()
 plt.savefig('plot1.png', dpi=300)
 
-# ==================================================
-# SECTION 5: LOAD USING PICKLE
-# ==================================================
-import pickle
-with open('model.pkl','wb') as f:
-    pickle.dump(svr,f)
+# # ==================================================
+# # SECTION 5: LOAD USING PICKLE
+# # ==================================================
+# import pickle
+# with open('model.pkl','wb') as f:
+#     pickle.dump(svr,f)

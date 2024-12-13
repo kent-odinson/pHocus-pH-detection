@@ -48,7 +48,43 @@ if predict is not None:
     image = Image.open(predict)
     st.image(image, use_container_width=True)
 
-# enter pH detection model
+# Extract Color Value
+import cv2
+import os
+import csv
+
+
+def data(m):
+    BGR_avg = list(map(float, cv2.mean(img)[:3]))
+
+    Gray = BGR_avg[0]*0.114 + BGR_avg[1]*0.587 + BGR_avg[2]*0.299
+    Xb = BGR_avg[0]/Gray
+    Xg = BGR_avg[1]/Gray
+    Xr = BGR_avg[2]/Gray
+    l1 = [Gray,Xb,Xg,Xr]
+
+    hsv = cv2.cvtColor(img, cv2.COLOR_BGR2HSV)
+    HSV_avg = list(map(float, cv2.mean(hsv)[:3]))
+
+    lab = cv2.cvtColor(img, cv2.COLOR_BGR2Lab)
+    Lab_avg = list(map(float, cv2.mean(lab)[:3]))
+
+    c = BGR_avg + l1 + HSV_avg + Lab_avg
+
+    return c
+
+with open("C:/Users/ASUS/Documents/(())/Semester 7/Despro 2/pH Detection Using Smartphone/answer.csv", "a", newline='') as f: #filepath save CSV file
+    writer = csv.writer(f)
+    writer.writerow(["B","G","R","Gray","Xb","Xg","Xr","H","S","V","L","a","b"])
+    img = cv2.imread(predict)
+    writer.writerow(data(img) + f)
+
+# Load Regression Function Using Pickle
+import pickle
+ph = pickle.load(open('mlmodel.pkl', 'rb'))
+
+# Data Processing
+res = ph.predict(predict)
 
 # Prediction Output
 st.write("### Prediction Results")
@@ -61,11 +97,3 @@ elif d<=0:
     dcolor = "normal"
 elif d>=0:
     dcolor = "inverse"
-
-# # Load Using Pickle
-# import pickle
-# with open('model.pkl', 'rb') as f:
-#     ph = pickle.load(f)
-
-# # Data Processing
-# res = ph.predict(predict)

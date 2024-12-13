@@ -25,7 +25,7 @@ y = df.iloc[:, -1]
 X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=0)
 
 # Construct SVR Model
-svr = SVR(kernel='poly', degree=5)
+svr = SVR(kernel='poly', degree=7)
 
 # Model Training
 svr.fit(X_train, y_train)
@@ -36,32 +36,31 @@ svr.fit(X_train, y_train)
 # Prediction Making on Testing Set
 y_pred = svr.predict(X_test)
 
-# Calculation of Evaluation Indicators
-mse = mean_squared_error(y_test, y_pred)
-mae = mean_absolute_error(y_test, y_pred)
-r2 = r2_score(y_test, y_pred)
+# # Calculation of Evaluation Indicators
+# mse = mean_squared_error(y_test, y_pred)
+# mae = mean_absolute_error(y_test, y_pred)
+# r2 = r2_score(y_test, y_pred)
 
-# Print Calculation Result
-print('Mean Squared Error: ', mse)
-print('Mean Absolute Error: ', mae)
-print('Coefficient of Determination Score: ', r2)
+# # Print Calculation Result
+# print('Mean Squared Error: ', mse)
+# print('Mean Absolute Error: ', mae)
+# print('Coefficient of Determination Score: ', r2)
 
-# Comparison Graph Plotting
-fig, ax = plt.subplots()
-ax.scatter(y_pred, y_test, s=10)
-ax.plot([0,10.0], [0,10.0], '--', color='gray', label='Perfect Calibration')
-ax.set_xlabel('Predicted Value')
-ax.set_ylabel('Observed Value')
-ax.legend(loc='lower right')
-plt.title('test')
-plt.rcParams['savefig.dpi'] = 300 #Saved Image Quality
-plt.rcParams['figure.dpi'] = 300 #Displayed Image Resolution
-plt.show()
-plt.savefig('plot1.png', dpi=300)
+# # Comparison Graph Plotting
+# fig, ax = plt.subplots()
+# ax.scatter(y_pred, y_test, s=10)
+# ax.plot([0,10.0], [0,10.0], '--', color='gray', label='Perfect Calibration')
+# ax.set_xlabel('Predicted Value')
+# ax.set_ylabel('Observed Value')
+# ax.legend(loc='lower right')
+# plt.title('test')
+# plt.rcParams['savefig.dpi'] = 300 #Saved Image Quality
+# plt.rcParams['figure.dpi'] = 300 #Displayed Image Resolution
+# plt.show()
+# plt.savefig('plot1.png', dpi=300)
 
-# # ==================================================
-# # SECTION 5: LOAD USING PICKLE
-# # ==================================================
-# import pickle
-# with open('model.pkl','wb') as f:
-#     pickle.dump(svr,f)
+# ==================================================
+# SECTION 5: LOAD USING PICKLE
+# ==================================================
+import pickle
+pickle.dump(svr, open('mlmodel.pkl', 'wb'))

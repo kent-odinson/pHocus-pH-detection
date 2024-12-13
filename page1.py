@@ -32,9 +32,9 @@ st.markdown(
 )
 
 # App title
-tit1, tit2 = st.columns([1,5])
+tit1, tit2 = st.columns([1,3])
 with tit1:
-    st.image(logo, width=150)
+    st.image(logo)
 with tit2:
     st.write("## pHocus Smart Patch")
 st.write("""

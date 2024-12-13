@@ -4,7 +4,6 @@
 # Import Libraries
 import streamlit as st
 import numpy as np
-import csv
 
 # Input Needed Image
 from PIL import Image
@@ -49,6 +48,9 @@ if predict is not None:
     st.image(image, use_container_width=True)
 
 # Extract Color Value
+import cv2
+import os
+import csv
 def data(m):
     BGR_avg = list(map(float, cv2.mean(predict)[:3]))
 

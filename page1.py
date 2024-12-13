@@ -34,10 +34,9 @@ st.markdown(
 # App title
 tit1, tit2 = st.columns(2)
 with tit1:
-    st.image(logo, width=50)
+    st.image(logo, width=150)
 with tit2:
-    st.header("pHocus Smart Patch")
-    st.write("### Heal. Track. Predict.")
+    st.write("## pHocus Smart Patch")
 st.write("""
 ##### A pH detector to measure your skin pH from just a photo of patch!
 """)

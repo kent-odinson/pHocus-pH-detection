@@ -49,7 +49,6 @@ if predict is not None:
 
 # Extract Color Value
 import cv2
-import os
 import csv
 
 def data(m):

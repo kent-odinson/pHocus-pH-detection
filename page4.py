@@ -47,8 +47,8 @@ with team1:
     st.image(kent, width=200)
 with team2:
     st.write("""
-             ## Kent Frederick Wirawan
-             ## (2106706760)""")
+             #### Kent Frederick Wirawan
+             #### (2106706760)""")
 # st.write(""" #### Meet The Team: Kelompok 1 Desain Proyek Teknik Biomedik 2021
 # Debby Rofiko Malik (2106705000)
 # Syafamillah Tsabitah (2106631816)  

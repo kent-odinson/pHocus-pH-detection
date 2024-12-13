@@ -52,7 +52,7 @@ st.write("""
 
 # About section
 st.write("#### Meet The Team: Kelompok 1 Desain Proyek Teknik Biomedik 2021")
-team1, team2 = st.columns([1,3])
+team1, team2 = st.columns([1,5])
 with team1:
     st.image(syafa)
     st.image(debby)

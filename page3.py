@@ -67,12 +67,12 @@ def data(m):
 
     return c
 
-# Load Regression Function Using Pickle
-import pickle
-ph = pickle.load(open('mlmodel.pkl', 'rb'))
+# # Load Regression Function Using Pickle
+# import pickle
+# ph = pickle.load(open('mlmodel.pkl', 'rb'))
 
-# Data Processing
-res = ph.predict(data(predict) + [""])
+# # Data Processing
+# res = ph.predict(data(predict) + [""])
 
 # Prediction Output
 st.write("### Prediction Results")

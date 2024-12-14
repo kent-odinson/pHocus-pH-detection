@@ -46,26 +46,26 @@ st.write("""
 """)
 
 # About section
-st.write("#### Meet The Team: Kelompok 1 Desain Proyek Teknik Biomedik 2021")
+st.write("### Meet The Team: Kelompok 1 Desain Proyek Teknik Biomedik 2021")
 team1, team2 = st.columns([1,5])
 with team1:
-    st.image(syafa, width=75)
-    st.image(debby, width=75)
-    st.image(kent, width=75)
-    st.image(zahra, width=75)
+    st.image(syafa, width=100)
+    st.image(debby, width=100)
+    st.image(kent, width=100)
+    st.image(zahra, width=100)
 with team2:
     st.write("""
-             ##### Syafamillah Tsabitah
+             #### Syafamillah Tsabitah
              PIC for Patch Finalization and Analysis""")
     st.write("")
     st.write("""
-             ##### Debby Rofiko Malik
+             #### Debby Rofiko Malik
              PIC for 3D Modelling and Environment Box""")
     st.write("")
     st.write("""
-             ##### Kent Frederick Wirawan
+             #### Kent Frederick Wirawan
              PIC for Machine Learning and User Interface""")
     st.write("")
     st.write("""
-             ##### Fatimah Azzahra
+             #### Fatimah Azzahra
              PIC for Patch Making and Prototype Testing""")

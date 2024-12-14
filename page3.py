@@ -85,3 +85,4 @@ elif d<=0:
     dcolor = "normal"
 elif d>=0:
     dcolor = "inverse"
+st.metric(value=prediction_result, delta=d, delta_color=dcolor)

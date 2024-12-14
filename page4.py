@@ -49,10 +49,10 @@ st.write("""
 st.write("#### Meet The Team: Kelompok 1 Desain Proyek Teknik Biomedik 2021")
 team1, team2 = st.columns([1,5])
 with team1:
-    st.image(syafa)
-    st.image(debby)
-    st.image(kent)
-    st.image(zahra)
+    st.image(syafa, width=100)
+    st.image(debby, width=100)
+    st.image(kent, width=100)
+    st.image(zahra, width=100)
 with team2:
     st.write("""
              #### Syafamillah Tsabitah

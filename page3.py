@@ -75,7 +75,6 @@ def data(m):
 # res = ph.predict(data(predict) + [""])
 
 # Prediction Output
-st.write("### Prediction Results")
 prediction_result = 5.0
 d = prediction_result - 5.5
 dcolor=""
@@ -85,4 +84,4 @@ elif d<=0:
     dcolor = "normal"
 elif d>=0:
     dcolor = "inverse"
-st.metric(value=prediction_result, delta=d, delta_color=dcolor)
+st.metric("### Prediction Results", value=prediction_result, delta=d, delta_color=dcolor)

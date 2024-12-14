@@ -56,16 +56,16 @@ with team1:
 with team2:
     st.write("""
              #### Syafamillah Tsabitah
-             2106631816""")
+             PIC for Patch Finalization and Analysis""")
     st.write("")
     st.write("""
              #### Debby Rofiko Malik
-             2106705000""")
+             PIC for 3D Modelling and Environment Box""")
     st.write("")
     st.write("""
              #### Kent Frederick Wirawan
-             2106706760""")
+             PIC for Machine Learning and User Interface""")
     st.write("")
     st.write("""
              #### Fatimah Azzahra
-             2106732235""")
+             PIC for Patch Making and Prototype Testing""")

@@ -55,17 +55,17 @@ with team1:
     st.image(zahra, width=100)
 with team2:
     st.write("""
-             #### Syafamillah Tsabitah
+             ##### Syafamillah Tsabitah
              PIC for Patch Finalization and Analysis""")
     st.write("")
     st.write("""
-             #### Debby Rofiko Malik
+             ##### Debby Rofiko Malik
              PIC for 3D Modelling and Environment Box""")
     st.write("")
     st.write("""
-             #### Kent Frederick Wirawan
+             ##### Kent Frederick Wirawan
              PIC for Machine Learning and User Interface""")
     st.write("")
     st.write("""
-             #### Fatimah Azzahra
+             ##### Fatimah Azzahra
              PIC for Patch Making and Prototype Testing""")

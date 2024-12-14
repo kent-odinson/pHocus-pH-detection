@@ -10,9 +10,8 @@ from PIL import Image
 import requests
 from io import BytesIO
 
-url2 = "https://drive.google.com/uc?export=download&id=1U1mWRiB-Tj5kC9krER5h_tup7veb4LdJ"
-response2 = requests.get(url2)
-initial = Image.open(BytesIO(response2.content))
+url2 = requests.get("https://drive.google.com/uc?export=download&id=1U1mWRiB-Tj5kC9krER5h_tup7veb4LdJ")
+initial = Image.open(BytesIO(url2.content))
 
 # Multiple Page
 st.set_page_config(page_title="pHocus Smart Patch", layout="centered", initial_sidebar_state="auto", page_icon= initial)

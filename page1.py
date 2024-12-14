@@ -10,12 +10,10 @@ from PIL import Image
 import requests
 from io import BytesIO
 
-url1 = "https://drive.google.com/uc?export=download&id=1Tj0anph6-lVTRn16FVwWivIYU027Tosy"
-response1 = requests.get(url1)
-url3 = "https://drive.google.com/uc?export=download&id=1diCJUAVNQcu2aRDJZA-afDHRELuhNR_E"
-response3 = requests.get(url3)
-logo = Image.open(BytesIO(response1.content))
-expectation = Image.open(BytesIO(response3.content))
+url1 = requests.get("https://drive.google.com/uc?export=download&id=1Tj0anph6-lVTRn16FVwWivIYU027Tosy")
+url3 = requests.get("https://drive.google.com/uc?export=download&id=1diCJUAVNQcu2aRDJZA-afDHRELuhNR_E")
+logo = Image.open(BytesIO(url1.content))
+expectation = Image.open(BytesIO(url3.content))
 
 # Background and Theme Adjustment
 st.markdown(

@@ -56,16 +56,16 @@ with team1:
 with team2:
     st.write("""
              #### Syafamillah Tsabitah
-             2106631816
-
-             
+             2106631816""")
+    st.write("")
+    st.write("""
              #### Debby Rofiko Malik
-             2106705000
-
-             
+             2106705000""")
+    st.write("")
+    st.write("""
              #### Kent Frederick Wirawan
-             2106706760
-
-             
+             2106706760""")
+    st.write("")
+    st.write("""
              #### Fatimah Azzahra
              2106732235""")

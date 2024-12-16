@@ -6,7 +6,7 @@ import streamlit as st
 import numpy as np
 
 # Input Needed Image
-from PIL import Image
+from PIL import Image 
 import requests
 from io import BytesIO
 
@@ -68,8 +68,8 @@ def data(m):
     return c
 
 # Load Regression Function Using Pickle
-import joblib
-ph = joblib.load(BytesIO(requests.get(https://raw.githubusercontent.com/kent-odinson/pHocus-pH-detection/blob/main/mlmodel.pkl).content))
+import pickle
+ph = pickle.load(BytesIO(requests.get("https://raw.githubusercontent.com/kent-odinson/pHocus-pH-detection/main/mlmodel.pkl").content))
 
 if predict is not None:
     # Display the uploaded image

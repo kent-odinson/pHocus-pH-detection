@@ -4,6 +4,7 @@
 # Import Libraries
 import streamlit as st
 import numpy as np
+import pickle
 
 # Input Needed Image
 from PIL import Image 
@@ -68,7 +69,6 @@ def data(m):
     return c
 
 # Load Regression Function Using Pickle
-import pickle
 ph = pickle.load(BytesIO(requests.get("https://raw.githubusercontent.com/kent-odinson/pHocus-pH-detection/main/mlmodel.pkl").content))
 
 if predict is not None:

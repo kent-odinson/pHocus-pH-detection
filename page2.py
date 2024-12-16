@@ -10,7 +10,7 @@ from PIL import Image
 import requests
 from io import BytesIO
 
-logo = Image.open(BytesIO(requests.get("https://drive.google.com/uc?export=download&id=1Tj0anph6-lVTRn16FVwWivIYU027Tosy").content))
+logo = Image.open(BytesIO(requests.get("https://drive.google.com/uc?export=download&id=1EuzviqgyPz8Ve-jUqounzMGFLfBKKAQz").content))
 step = Image.open(BytesIO(requests.get("https://drive.google.com/uc?export=download&id=18SsN38N21BFjnrfMErqGWRNoaKXtPuQU").content))
 wound = Image.open(BytesIO(requests.get("https://drive.google.com/uc?export=download&id=1Y3j_AtiWQFuWujveMVO0n4z1AmUfWAVW").content))
 apply = Image.open(BytesIO(requests.get("https://drive.google.com/uc?export=download&id=1kzQDZosjBpGLj0_RC4oZKWF8j76f4CXJ").content))

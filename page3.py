@@ -78,7 +78,7 @@ if predict is not None:
     st.image(image, use_container_width=True)
     
     # Data Processing
-    res = ph.predict([data(hai)])[0]
+    res = round(ph.predict([data(hai)])[0],2)
 
 # Prediction Output
 d = res - 5.5

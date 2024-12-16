@@ -40,7 +40,7 @@ tit1, tit2 = st.columns([1,4])
 with tit1:
     st.image(logo, width=300)
 with tit2:
-    st.write("## pHocus Smart Patch")
+    st.write("## PHocus Smart Patch")
 st.write("""
 ##### A pH detector to measure your skin pH from just a photo of patch!
 """)

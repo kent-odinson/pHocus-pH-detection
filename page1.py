@@ -10,7 +10,7 @@ from PIL import Image
 import requests
 from io import BytesIO
 
-logo = Image.open(BytesIO(requests.get("https://drive.google.com/uc?export=download&id=1Tj0anph6-lVTRn16FVwWivIYU027Tosy").content))
+logo = Image.open(BytesIO(requests.get("https://drive.google.com/uc?export=download&id=1EuzviqgyPz8Ve-jUqounzMGFLfBKKAQz").content))
 expectation = Image.open(BytesIO(requests.get("https://drive.google.com/uc?export=download&id=1diCJUAVNQcu2aRDJZA-afDHRELuhNR_E").content))
 
 # Background and Theme Adjustment

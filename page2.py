@@ -71,6 +71,8 @@ with step2:
              #### Capture!
              After the reaction occur, place the patch in the light box and capture it!""")
     st.write("")
+    st.write("")
+    st.write("")
     st.write("""
              #### Predict!
              Upload the picture to our website, and get the pH value!""")

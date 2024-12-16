@@ -68,8 +68,8 @@ def data(m):
     return c
 
 # Load Regression Function Using Pickle
-import pickle
-ph = pickle.load(open('mlmodel.pkl', 'rb'))
+import joblib
+ph = joblib.load(BytesIO(requests.get(https://raw.githubusercontent.com/kent-odinson/pHocus-pH-detection/blob/main/mlmodel.pkl).content))
 
 if predict is not None:
     # Display the uploaded image

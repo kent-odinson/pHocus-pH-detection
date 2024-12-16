@@ -15,6 +15,8 @@ step = Image.open(BytesIO(requests.get("https://drive.google.com/uc?export=downl
 wound = Image.open(BytesIO(requests.get("https://drive.google.com/uc?export=download&id=1Y3j_AtiWQFuWujveMVO0n4z1AmUfWAVW").content))
 apply = Image.open(BytesIO(requests.get("https://drive.google.com/uc?export=download&id=1kzQDZosjBpGLj0_RC4oZKWF8j76f4CXJ").content))
 reaction = Image.open(BytesIO(requests.get("https://drive.google.com/uc?export=download&id=1BJ74UK_dhMn8pyQt5dVr91N-V2Kf9Pfi").content))
+capture = Image.open(BytesIO(requests.get("https://drive.google.com/uc?export=download&id=16Y-kVsYJ1om3-CY9tvu_PBFMpYksp9Aj").content))
+predict = Image.open(BytesIO(requests.get("https://drive.google.com/uc?export=download&id=17Amt6DA4yBw1_bgrRBAczTaL8SO8dObC").content))
 
 # Background and Theme Adjustment
 st.markdown(
@@ -50,6 +52,8 @@ with step1:
     st.image(wound, width=500)
     st.image(apply, width=500)
     st.image(reaction, width=500)
+    st.image(capture, width=500)
+    st.image(predict, width=500)
 with step2:
     st.write("""
              #### Ouch!
@@ -62,3 +66,11 @@ with step2:
     st.write("""
              #### React!
              Allow the patch to change color based on the wound's pH level""")
+    st.write("")
+    st.write("""
+             #### Capture!
+             After the reaction occur, place the patch in the light box and capture it!""")
+    st.write("")
+    st.write("""
+             #### Predict!
+             Upload the picture to our website, and get the pH value!""")

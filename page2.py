@@ -45,7 +45,7 @@ st.write("""
 ### How To Use Our Product?
 You've got a patch, and your phone. But what to do with them? Here's some explanation to visualize it:
 """)
-step1, step2 = st.columns([1,5])
+step1, step2 = st.columns([1,4])
 with step1:
     st.image(wound, width=300)
     st.image(apply, width=300)
@@ -53,10 +53,8 @@ with step1:
 with step2:
     st.write("""
              #### Ouch!
-             You just hurt yourself, and it need treatment as soon as possible!
-             #### Debby Rofiko Malik
-             PIC for 3D Modelling and Environment Box
-             #### Kent Frederick Wirawan
-             PIC for Machine Learning and User Interface
-             #### Fatimah Azzahra
-             PIC for Patch Making and Prototype Testing""")
+             Your skin is damaged! Quick treat it as soon as possible!
+             #### Apply!
+             Place the pHocus Smartpatch securely on the wound
+             #### React!
+             Allow the patch to change color based on the wound's pH level""")

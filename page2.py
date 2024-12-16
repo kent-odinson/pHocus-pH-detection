@@ -53,8 +53,12 @@ with step1:
 with step2:
     st.write("""
              #### Ouch!
-             Your skin is damaged! Quick treat it as soon as possible!
+             Your skin is damaged! Quick treat it as soon as possible!""")
+    st.write("")
+    st.write("""
              #### Apply!
-             Place the pHocus Smartpatch securely on the wound
+             Place the pHocus Smartpatch securely on the wound""")
+    st.write("")
+    st.write("""
              #### React!
              Allow the patch to change color based on the wound's pH level""")

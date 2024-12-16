@@ -13,7 +13,7 @@ from io import BytesIO
 logo = Image.open(BytesIO(requests.get("https://drive.google.com/uc?export=download&id=1Tj0anph6-lVTRn16FVwWivIYU027Tosy").content))
 step = Image.open(BytesIO(requests.get("https://drive.google.com/uc?export=download&id=18SsN38N21BFjnrfMErqGWRNoaKXtPuQU").content))
 wound = Image.open(BytesIO(requests.get("https://drive.google.com/uc?export=download&id=1oU6px7JjOl7hAktKa2JZjU5z4-9TRy0c").content))
-apply = Image.open(BytesIO(requests.get("https://drive.google.com/uc?export=download&id=1aHtRfhKT0Idh49yMkQuDFo7jMKA9ULhZ/").content))
+apply = Image.open(BytesIO(requests.get("https://drive.google.com/uc?export=download&id=1aHtRfhKT0Idh49yMkQuDFo7jMKA9ULhZ").content))
 reaction = Image.open(BytesIO(requests.get("https://drive.google.com/uc?export=download&id=1zuWM1aKm2S5B1tbQM87WQHeOPmbJ615a").content))
 
 # Background and Theme Adjustment

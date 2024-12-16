@@ -10,16 +10,11 @@ from PIL import Image
 import requests
 from io import BytesIO
 
-response1 = requests.get("https://drive.google.com/uc?export=download&id=1Tj0anph6-lVTRn16FVwWivIYU027Tosy")
-response5 = requests.get("https://drive.google.com/uc?export=download&id=1Vaiutx8UktOjT_k1QpLD7V7RjWqN3yAT")
-response6 = requests.get("https://drive.google.com/uc?export=download&id=1ijbwFP43NehEwuosPz11dmX46B5rboXn")
-response7 = requests.get("https://drive.google.com/uc?export=download&id=1ySTOr2vCN15akwJpB_jVJCooNEZcAvv2")
-response8 = requests.get("https://drive.google.com/uc?export=download&id=1TwnmclaTGC348v6iqA8_OcUYINPI1DpA")
-logo = Image.open(BytesIO(response1.content))
-syafa = Image.open(BytesIO(response5.content))
-debby = Image.open(BytesIO(response6.content))
-kent = Image.open(BytesIO(response7.content))
-zahra = Image.open(BytesIO(response8.content))
+logo = Image.open(BytesIO(requests.get("https://drive.google.com/uc?export=download&id=1Tj0anph6-lVTRn16FVwWivIYU027Tosy").content))
+syafa = Image.open(BytesIO(requests.get("https://drive.google.com/uc?export=download&id=1Vaiutx8UktOjT_k1QpLD7V7RjWqN3yAT").content))
+debby = Image.open(BytesIO(requests.get("https://drive.google.com/uc?export=download&id=1ijbwFP43NehEwuosPz11dmX46B5rboXn").content))
+kent = Image.open(BytesIO(requests.get("https://drive.google.com/uc?export=download&id=1ySTOr2vCN15akwJpB_jVJCooNEZcAvv2").content))
+zahra = Image.open(BytesIO(requests.get("https://drive.google.com/uc?export=download&id=1TwnmclaTGC348v6iqA8_OcUYINPI1DpA").content))
 
 # Background and Theme Adjustment
 st.markdown(

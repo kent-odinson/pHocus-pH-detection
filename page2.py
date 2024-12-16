@@ -45,11 +45,11 @@ st.write("""
 ### How To Use Our Product?
 You've got a patch, and your phone. But what to do with them? Here's some explanation to visualize it:
 """)
-step1, step2 = st.columns([1,4])
+step1, step2 = st.columns([1,3])
 with step1:
-    st.image(wound, width=400)
-    st.image(apply, width=400)
-    st.image(reaction, width=400)
+    st.image(wound, width=500)
+    st.image(apply, width=500)
+    st.image(reaction, width=500)
 with step2:
     st.write("""
              #### Ouch!

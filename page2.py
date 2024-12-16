@@ -47,14 +47,13 @@ You've got a patch, and your phone. But what to do with them? Here's some explan
 """)
 step1, step2 = st.columns([3,2])
 with step1:
-    st.image(syafa, width=100)
-    st.image(debby, width=100)
-    st.image(kent, width=100)
-    st.image(zahra, width=100)
+    st.image(wound, width=100)
+    st.image(apply, width=100)
+    st.image(reaction, width=100)
 with step2:
     st.write("""
-             #### Syafamillah Tsabitah
-             PIC for Patch Finalization and Analysis""")
+             #### Ouch!
+             You just hurt yourself, and it need treatment as soon as possible!""")
     st.write("")
     st.write("""
              #### Debby Rofiko Malik

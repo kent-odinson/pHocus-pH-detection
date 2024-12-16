@@ -10,10 +10,8 @@ from PIL import Image
 import requests
 from io import BytesIO
 
-url1 = requests.get("https://drive.google.com/uc?export=download&id=1Tj0anph6-lVTRn16FVwWivIYU027Tosy")
-url3 = requests.get("https://drive.google.com/uc?export=download&id=1diCJUAVNQcu2aRDJZA-afDHRELuhNR_E")
-logo = Image.open(BytesIO(url1.content))
-expectation = Image.open(BytesIO(url3.content))
+logo = Image.open(BytesIO(requests.get("https://drive.google.com/uc?export=download&id=1Tj0anph6-lVTRn16FVwWivIYU027Tosy").content))
+expectation = Image.open(BytesIO(requests.get("https://drive.google.com/uc?export=download&id=1diCJUAVNQcu2aRDJZA-afDHRELuhNR_E").content))
 
 # Background and Theme Adjustment
 st.markdown(
@@ -34,9 +32,15 @@ tit1, tit2 = st.columns([1,3])
 with tit1:
     st.image(logo, width=300)
 with tit2:
-    st.write("## pHocus Smart Patch")
+    st.write("## PHocus Smart Patch")
 st.write("""
 ##### A pH detector to measure your skin pH from just a photo of patch!
+""")
+
+# What Is Phocus
+st.write("""
+### What is PHocus Smart Patch?
+
 """)
 
 # Expected Outcome

@@ -10,10 +10,11 @@ from PIL import Image
 import requests
 from io import BytesIO
 
-url1 = requests.get("https://drive.google.com/uc?export=download&id=1Tj0anph6-lVTRn16FVwWivIYU027Tosy")
-url4 = requests.get("https://drive.google.com/uc?export=download&id=18SsN38N21BFjnrfMErqGWRNoaKXtPuQU")
-logo = Image.open(BytesIO(url1.content))
-step = Image.open(BytesIO(url4.content))
+logo = Image.open(BytesIO(requests.get("https://drive.google.com/uc?export=download&id=1Tj0anph6-lVTRn16FVwWivIYU027Tosy").content))
+step = Image.open(BytesIO(requests.get("https://drive.google.com/uc?export=download&id=18SsN38N21BFjnrfMErqGWRNoaKXtPuQU").content))
+apply = Image.open(BytesIO(requests.get("https://drive.google.com/uc?export=download&id=1iBv-87t2uVQAHa4_aCwiBgZDeteUF7SK").content))
+wound = Image.open(BytesIO(requests.get("https://drive.google.com/uc?export=download&id=1u_E0hxkcNNPEtVKIlhQ_CRGgsKyjaXlh").content))
+reaction = Image.open(BytesIO(requests.get("https://drive.google.com/uc?export=download&id=1QzUK8R_FT8mrU-6kW785VoBeHG80A2DJ").content))
 
 # Background and Theme Adjustment
 st.markdown(
@@ -34,20 +35,35 @@ tit1, tit2 = st.columns([1,3])
 with tit1:
     st.image(logo, width=300)
 with tit2:
-    st.write("## pHocus Smart Patch")
+    st.write("## PHocus Smart Patch")
 st.write("""
 ##### A pH detector to measure your skin pH from just a photo of patch!
 """)
 
 # How It Works
 st.write("""
-### How Does It Works?
+### How To Use Our Product?
 You've got a patch, and your phone. But what to do with them? Here's some explanation to visualize it:
 """)
 step1, step2 = st.columns([3,2])
 with step1:
-    st.image(step)
+    st.image(syafa, width=100)
+    st.image(debby, width=100)
+    st.image(kent, width=100)
+    st.image(zahra, width=100)
 with step2:
-    st.write("1. Put the patch on the wounded area")
-    st.write("2. Wait until the reaction done")
-    st.write("3. Capture the result, and upload it!")
+    st.write("""
+             #### Syafamillah Tsabitah
+             PIC for Patch Finalization and Analysis""")
+    st.write("")
+    st.write("""
+             #### Debby Rofiko Malik
+             PIC for 3D Modelling and Environment Box""")
+    st.write("")
+    st.write("""
+             #### Kent Frederick Wirawan
+             PIC for Machine Learning and User Interface""")
+    st.write("")
+    st.write("""
+             #### Fatimah Azzahra
+             PIC for Patch Making and Prototype Testing""")

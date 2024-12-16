@@ -11,9 +11,7 @@ from PIL import Image
 import requests
 from io import BytesIO
 
-url1 = "https://drive.google.com/uc?export=download&id=1Tj0anph6-lVTRn16FVwWivIYU027Tosy"
-response1 = requests.get(url1)
-logo = Image.open(BytesIO(response1.content))
+logo = Image.open(BytesIO(requests.get("https://drive.google.com/uc?export=download&id=1Tj0anph6-lVTRn16FVwWivIYU027Tosy").content))
 
 # Background and Theme Adjustment
 st.markdown(

@@ -39,44 +39,49 @@ st.write("""
 """)
 
 # User Input
+import cv2
 st.write("### Input Photo")
 predict = st.file_uploader("", type=["jpg", "jpeg", "png"])
-
-if predict is not None:
-    # Display the uploaded image
-    image = Image.open(predict)
-    st.image(image, use_container_width=True)
+res = 0
 
 # Extract Color Value
 def data(m):
-    BGR_avg = list(map(float, cv2.mean(predict)[:3]))
+    mm = np.asarray(m, dtype=np.uint8)
+    image = cv2.imdecode(mm, 1)
+    BGR_avg = list(map(float, cv2.mean(image)[:3]))
+    print(BGR_avg)
 
-    Gray = BGR_avg[0]*0.114 + BGR_avg[1]*0.587 + BGR_avg[2]*0.299
+    Gray = (BGR_avg[0]*0.114 + BGR_avg[1]*0.587 + BGR_avg[2]*0.299) or 1.0
     Xb = BGR_avg[0]/Gray
     Xg = BGR_avg[1]/Gray
     Xr = BGR_avg[2]/Gray
     l1 = [Gray,Xb,Xg,Xr]
 
-    hsv = cv2.cvtColor(predict, cv2.COLOR_BGR2HSV)
+    hsv = cv2.cvtColor(image, cv2.COLOR_BGR2HSV)
     HSV_avg = list(map(float, cv2.mean(hsv)[:3]))
 
-    lab = cv2.cvtColor(predict, cv2.COLOR_BGR2Lab)
+    lab = cv2.cvtColor(image, cv2.COLOR_BGR2Lab)
     Lab_avg = list(map(float, cv2.mean(lab)[:3]))
 
     c = BGR_avg + l1 + HSV_avg + Lab_avg
 
     return c
 
-# # Load Regression Function Using Pickle
-# import pickle
-# ph = pickle.load(open('mlmodel.pkl', 'rb'))
+# Load Regression Function Using Pickle
+import pickle
+ph = pickle.load(open('mlmodel.pkl', 'rb'))
 
-# # Data Processing
-# res = ph.predict(data(predict) + [""])
+if predict is not None:
+    # Display the uploaded image
+    hai = bytearray(predict.read())
+    image = Image.open(predict)
+    st.image(image, use_container_width=True)
+    
+    # Data Processing
+    res = ph.predict([data(hai)])[0]
 
 # Prediction Output
-prediction_result = 5.0
-d = prediction_result - 5.5
+d = res - 5.5
 dcolor=""
 if d==0:
     dcolor = "off"
@@ -84,4 +89,4 @@ elif d<=0:
     dcolor = "normal"
 elif d>=0:
     dcolor = "inverse"
-st.metric("### Prediction Results", value=prediction_result, delta=d, delta_color=dcolor)
+st.metric("### Prediction Results", value=res, delta=d, delta_color=dcolor)

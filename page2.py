@@ -47,9 +47,9 @@ You've got a patch, and your phone. But what to do with them? Here's some explan
 """)
 step1, step2 = st.columns([1,5])
 with step1:
-    st.image(wound, width=200)
-    st.image(apply, width=200)
-    st.image(reaction, width=200)
+    st.image(wound, width=300)
+    st.image(apply, width=300)
+    st.image(reaction, width=300)
 with step2:
     st.write("""
              #### Ouch!

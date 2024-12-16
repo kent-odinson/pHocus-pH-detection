@@ -10,7 +10,7 @@ from PIL import Image
 import requests
 from io import BytesIO
 
-logo = Image.open(BytesIO(requests.get("https://drive.google.com/uc?export=download&id=1Tj0anph6-lVTRn16FVwWivIYU027Tosy").content))
+logo = Image.open(BytesIO(requests.get("https://drive.google.com/uc?export=download&id=1EuzviqgyPz8Ve-jUqounzMGFLfBKKAQz").content))
 syafa = Image.open(BytesIO(requests.get("https://drive.google.com/uc?export=download&id=1Vaiutx8UktOjT_k1QpLD7V7RjWqN3yAT").content))
 debby = Image.open(BytesIO(requests.get("https://drive.google.com/uc?export=download&id=1ijbwFP43NehEwuosPz11dmX46B5rboXn").content))
 kent = Image.open(BytesIO(requests.get("https://drive.google.com/uc?export=download&id=1ySTOr2vCN15akwJpB_jVJCooNEZcAvv2").content))

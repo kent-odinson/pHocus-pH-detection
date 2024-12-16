@@ -73,6 +73,8 @@ with step2:
     st.write("")
     st.write("")
     st.write("")
+    st.write("")
+    st.write("")
     st.write("""
              #### Predict!
              Upload the picture to our website, and get the pH value!""")

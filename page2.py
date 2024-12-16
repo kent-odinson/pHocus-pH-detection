@@ -12,9 +12,9 @@ from io import BytesIO
 
 logo = Image.open(BytesIO(requests.get("https://drive.google.com/uc?export=download&id=1Tj0anph6-lVTRn16FVwWivIYU027Tosy").content))
 step = Image.open(BytesIO(requests.get("https://drive.google.com/uc?export=download&id=18SsN38N21BFjnrfMErqGWRNoaKXtPuQU").content))
-wound = Image.open(BytesIO(requests.get("https://drive.google.com/uc?export=download&id=1oU6px7JjOl7hAktKa2JZjU5z4-9TRy0c").content))
-apply = Image.open(BytesIO(requests.get("https://drive.google.com/uc?export=download&id=1aHtRfhKT0Idh49yMkQuDFo7jMKA9ULhZ").content))
-reaction = Image.open(BytesIO(requests.get("https://drive.google.com/uc?export=download&id=1zuWM1aKm2S5B1tbQM87WQHeOPmbJ615a").content))
+wound = Image.open(BytesIO(requests.get("https://drive.google.com/uc?export=download&id=1Y3j_AtiWQFuWujveMVO0n4z1AmUfWAVW").content))
+apply = Image.open(BytesIO(requests.get("https://drive.google.com/uc?export=download&id=1kzQDZosjBpGLj0_RC4oZKWF8j76f4CXJ").content))
+reaction = Image.open(BytesIO(requests.get("https://drive.google.com/uc?export=download&id=1BJ74UK_dhMn8pyQt5dVr91N-V2Kf9Pfi").content))
 
 # Background and Theme Adjustment
 st.markdown(

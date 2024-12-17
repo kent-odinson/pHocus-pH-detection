@@ -40,7 +40,7 @@ st.write("""
 # What Is pHocus
 st.write("""
 ### What is pHocus Smart Patch?
-pHocus Smartpatch combines cutting-edge wound care and pH monitoring to enhance healing, track progress, and predict recovery outcomes through innovative technology.
+pHocus Smartpatch combines cutting-edge **wound care** and **pH monitoring** to **enhance healing, track progress, and predict recovery outcomes** through **innovative technology**.
 """)
 
 # Why pHocus

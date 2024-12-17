@@ -52,4 +52,4 @@ with us2:
 st.write("""
 ### Why pHocus Smart Patch?
 """)
-st.image(choose, width=500)
+st.image(choose, use_container_width=True)

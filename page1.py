@@ -11,7 +11,8 @@ import requests
 from io import BytesIO
 
 logo = Image.open(BytesIO(requests.get("https://drive.google.com/uc?export=download&id=1EuzviqgyPz8Ve-jUqounzMGFLfBKKAQz").content))
-expectation = Image.open(BytesIO(requests.get("https://drive.google.com/uc?export=download&id=1diCJUAVNQcu2aRDJZA-afDHRELuhNR_E").content))
+us = Image.open(BytesIO(requests.get("https://drive.google.com/uc?export=download&id=1aje6O6XELpsv7vYE0uaRMyHd3q-a9yNt").content))
+choose = Image.open(BytesIO(requests.get("https://drive.google.com/uc?export=download&id=1Jx5H0WI_kcqGsSk4sy-d6YdJE3KGLrQW").content))
 
 # Background and Theme Adjustment
 st.markdown(
@@ -38,37 +39,17 @@ st.write("""
 """)
 
 # What Is pHocus
-st.write("""
-### What is pHocus Smart Patch?
-pHocus Smartpatch combines cutting-edge **wound care** and **pH monitoring** to **enhance healing, track progress, and predict recovery outcomes** through **innovative technology**.
-""")
+us1, us2 = st.columns([3, 1])
+with us1:
+    st.write("""
+             ### What is pHocus Smart Patch?
+             pHocus Smartpatch combines cutting-edge **wound care** and **pH monitoring** to **enhance healing, track progress, and predict recovery outcomes** through **innovative technology**.
+             """)
+with us2:
+    st.image(us)
 
 # Why pHocus
 st.write("""
 ### Why pHocus Smart Patch?
-
 """)
-
-# Expected Outcome
-st.write("""
-### What Do We Expect?
-After the reaction, a new color would be appear of the mixture. But what does the color mean?
-""")
-st.image(expectation)
-exp1, exp2, exp3, exp4, exp5, exp6, exp7, exp8 = st.columns(8)
-with exp1:
-    st.write("  ")
-with exp2:
-    st.write("Control color")
-with exp3:
-    st.write("Your skin is dry")
-with exp4:
-    st.write("Your skin is normal")
-with exp5:
-    st.write("Your skin is still bleeding")
-with exp6:
-    st.write("Your skin has a mild bleeding")
-with exp7:
-    st.write("Your skin has a moderate bleeding")
-with exp8:
-    st.write("Your skin has a severe bleeding")
+st.image(choose, use_container_width=True)

@@ -12,7 +12,7 @@ from io import BytesIO
 
 logo = Image.open(BytesIO(requests.get("https://drive.google.com/uc?export=download&id=1EuzviqgyPz8Ve-jUqounzMGFLfBKKAQz").content))
 us = Image.open(BytesIO(requests.get("https://drive.google.com/uc?export=download&id=1aje6O6XELpsv7vYE0uaRMyHd3q-a9yNt").content))
-choose = Image.open(BytesIO(requests.get("https://drive.google.com/uc?export=download&id=1Jx5H0WI_kcqGsSk4sy-d6YdJE3KGLrQW").content))
+choose = Image.open(BytesIO(requests.get("https://drive.google.com/uc?export=download&id=1fFSYxhHA37S6_pBv3dytJe3OzR1Pqkwj").content))
 
 # Background and Theme Adjustment
 st.markdown(
@@ -52,4 +52,4 @@ with us2:
 st.write("""
 ### Why pHocus Smart Patch?
 """)
-st.image(choose, use_container_width=True)
+st.image(choose, width=800)
